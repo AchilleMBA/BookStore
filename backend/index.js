@@ -3,7 +3,13 @@ import {PORT} from "./config.js";
 
 const app = express();
 
+app.get('/', (req,res)=> {
+    console.log(req)
+    return res.status(234).send('welcome To my world')
+
+});
+
 app.listen(PORT, () => {
     console.log (`App is listenig to port: ${PORT}`)
-})
+});
 
